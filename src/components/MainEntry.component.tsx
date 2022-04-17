@@ -13,13 +13,12 @@ const MainEntryComponent = (entryProps: EntryProps | any) => {
   return (
     <>
       <div className='columns-1 mt-10'>
-
         {entryProps?.textMain && <h1 className='text-center'>{entryProps?.textMain}</h1>}
 
         <div className='object-center px-10 mt-10'>
-          <Image src={entryProps?.image} alt='Picture of the author' />
+          <Image src={MainNuecesAndMorr} alt='Picture of the author'priority />
         </div>
-        
+
         {entryProps?.subtitle && <p className='text-center mt-10'>{entryProps?.subtitle}</p>}
       </div>
     </>
