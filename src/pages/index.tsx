@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import { StaticImageData } from 'next/image';
 import MainEntryComponent from '../components/MainEntry.component';
 import MainTitle from '../components/Maintitle.component';
+import SeparatorComponent from '../components/separator.component';
 import MainNuecesAndMorr from '../public/images/MainNuecesAndMorr.jpg';
 type EntryProps = {
   image: StaticImageData;
@@ -12,7 +13,7 @@ const Home: NextPage = () => {
 
   const entryPropsOne:EntryProps = {
     image: MainNuecesAndMorr,
-    textMain: 'Irene & Guillermo',
+    textMain: '14 de Dicembre del 2022 ',
     subtitle: 'Nuestra historia',
   };
 
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
     <div className='text-regal-blue'>
       <MainTitle></MainTitle>
       {entryPropsOne && <MainEntryComponent {...entryPropsOne}></MainEntryComponent>}
+      <SeparatorComponent></SeparatorComponent>
     </div>
   );
 };
