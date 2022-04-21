@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import MainNuecesAndMorr from '../public/images/MainNuecesAndMorr.jpg';
 import { StaticImageData } from 'next/image';
 
 type EntryProps = {
@@ -12,12 +11,12 @@ const MainEntryComponent = (entryProps: EntryProps | any) => {
 
   return (
     <>
-      <div className='columns-1 mt-10'>
+      <div className='flex flex-col items-center  mt-10'>
         {entryProps?.textMain && <h1 className='text-center'>{entryProps?.textMain}</h1>}
 
-        <div className='object-center px-10 mt-10'>
-          <Image src={MainNuecesAndMorr} alt='Picture of the author'priority />
-        </div>
+        <span className='flex items-center  mt-10'>
+          <Image src={entryProps.image} alt='Picture of the author'priority />
+        </span>
 
         {entryProps?.subtitle && <p className='text-center mt-10'>{entryProps?.subtitle}</p>}
       </div>
