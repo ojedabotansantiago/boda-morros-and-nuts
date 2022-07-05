@@ -1,5 +1,5 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
@@ -12,17 +12,18 @@ import { getAnalytics } from 'firebase/analytics';
 const firebaseConfig = {
   apiKey: 'AIzaSyBZoxuK4m_d_4KDA7EtvoWjgArVTTae0FE',
   authDomain: 'boda-irene-y-guillermo.firebaseapp.com',
+  databaseURL: 'https://boda-irene-y-guillermo-default-rtdb.europe-west1.firebasedatabase.app',
   projectId: 'boda-irene-y-guillermo',
   storageBucket: 'boda-irene-y-guillermo.appspot.com',
   messagingSenderId: '723867071007',
   appId: '1:723867071007:web:731259385080dc09e51b2a',
   measurementId: 'G-NCLSN6EX8V',
-}
+};
 
 function MyApp({ Component, pageProps }: AppProps) {
   const app = initializeApp(firebaseConfig);
   //const analytics = getAnalytics(app);
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;

@@ -1,22 +1,16 @@
 import Image from 'next/image';
 import React from 'react';
 import { EventHandler, FormEvent, useState } from 'react';
+import { FirebaseDto } from '../interfaces/firebase.interface';
+import { writeFirebaseDto } from '../services/firebase.service';
 
-type firebaseDto = {
-  guestEmail: string;
-  guestName: string;
-  guestSurnames: string;
-  companionName: string;
-  companionSurname: string;
-  songs?: string[];
-};
 const GuestForm = () => {
   console.log('GuestForm');
   const [companionSelected, setDataCompanionCheckboxChange] = useState(false);
   const [suggestedSong, setSuggestedSong] = useState(false);
 
   //const [email, setEmail] = useState('');
-  let dto: firebaseDto = {
+  let dto: FirebaseDto = {
     guestEmail: '',
     guestName: '',
     guestSurnames: '',
@@ -26,7 +20,7 @@ const GuestForm = () => {
 
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
-    debugger;
+
     const data: any = event?.target;
     dto.guestEmail = data.email.value;
     dto.guestName = data.name.value;
@@ -40,7 +34,19 @@ const GuestForm = () => {
       dto.songs = dirtySongsList.filter(Boolean);
     }
     console.log(dto);
+    saveForm();
   }
+  function saveForm() {
+    debugger;
+    writeFirebaseDto(dto)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
   function setCompanionSelected(data: any) {
     if (data) {
       setDataCompanionCheckboxChange(data.target.checked);
