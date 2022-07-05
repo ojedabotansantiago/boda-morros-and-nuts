@@ -1,13 +1,13 @@
 
 import { initializeApp } from "firebase/app";
 
-import { getDatabase, ref, set } from "firebase/database";
+import { getDatabase, push, ref } from "firebase/database";
 import { FirebaseDto } from '../interfaces/firebase.interface';
 
 export function writeFirebaseDto(firebaseDto: FirebaseDto) {
   debugger;
   const db = getDatabase();
-  return set(ref(db, 'guests/'), {
+  return push(ref(db, 'guests/'), {
     ...firebaseDto
   });
 }
