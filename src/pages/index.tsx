@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { StaticImageData } from 'next/image';
-import FormComponent from '../components/form.component';
+import GuestForm from '../components/GuestForm.component';
 import MainEntryComponent from '../components/MainEntry.component';
 import MainTitle from '../components/Maintitle.component';
 import SeparatorComponent from '../components/separator.component';
@@ -55,8 +55,7 @@ const Home: NextPage = () => {
       <SeparatorComponent></SeparatorComponent>
       {entryPropsFour && <MainEntryComponent {...entryPropsFour}></MainEntryComponent>}
       <SeparatorComponent></SeparatorComponent>
-
-      <FormComponent></FormComponent>
+      <GuestForm></GuestForm>
     </div>
   );
 };

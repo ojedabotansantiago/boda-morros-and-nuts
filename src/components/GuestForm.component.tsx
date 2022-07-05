@@ -9,8 +9,8 @@ type firebaseDto = {
   companionSurname: string;
   songs?: string[];
 };
-const FormComponent = () => {
-  console.log('FormComponent');
+const GuestForm = () => {
+  console.log('GuestForm');
 
   //const [email, setEmail] = useState('');
   let dto: firebaseDto = {
@@ -43,4 +43,4 @@ const FormComponent = () => {
   );
 };
 
-export default FormComponent;
+export default GuestForm;
