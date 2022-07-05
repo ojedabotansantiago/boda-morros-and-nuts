@@ -7,7 +7,7 @@ type EntryProps = {
   subtitle?: string;
 };
 const MainEntryComponent = (entryProps: EntryProps | any) => {
-  console.log('entryProps', entryProps);
+  //console.log('entryProps', entryProps);
 
   return (
     <>
@@ -15,7 +15,7 @@ const MainEntryComponent = (entryProps: EntryProps | any) => {
         {entryProps?.textMain && <h1 className='text-center'>{entryProps?.textMain}</h1>}
 
         <span className='flex items-center  mt-10'>
-          <Image src={entryProps.image} alt='Picture of the author'priority />
+          <Image src={entryProps.image} alt='Picture of the author' priority />
         </span>
 
         {entryProps?.subtitle && <p className='text-center mt-10'>{entryProps?.subtitle}</p>}

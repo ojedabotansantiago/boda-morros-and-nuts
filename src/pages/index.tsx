@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import { StaticImageData } from 'next/image';
+import FormComponent from '../components/form.component';
 import MainEntryComponent from '../components/MainEntry.component';
 import MainTitle from '../components/Maintitle.component';
 import SeparatorComponent from '../components/separator.component';
@@ -42,7 +43,7 @@ const Home: NextPage = () => {
       'Unlike Dumbledore, Karkaroff looked much younger; his hair and goatee were black. He was not dressed in sleek furs, but in thin and ragged robes. He was shaking. Even as Harry watched..',
   };
 
-  console.log(entryPropsOne);
+  //console.log(entryPropsOne);
   return (
     <div className='text-regal-blue'>
       <MainTitle></MainTitle>
@@ -54,10 +55,8 @@ const Home: NextPage = () => {
       <SeparatorComponent></SeparatorComponent>
       {entryPropsFour && <MainEntryComponent {...entryPropsFour}></MainEntryComponent>}
       <SeparatorComponent></SeparatorComponent>
-      <div className='text-center text-3xl font-bold mt-10'>
-        <h1 className='text-center text-3xl font-bold mt-10'>AQUI VA EL EL FORMULARIO PERO TODAVIA NO ESTA HECHO</h1>
-      </div>
-      
+
+      <FormComponent></FormComponent>
     </div>
   );
 };
