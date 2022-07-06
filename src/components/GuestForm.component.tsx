@@ -8,6 +8,7 @@ const GuestForm = () => {
   console.log('GuestForm');
   const [companionSelected, setDataCompanionCheckboxChange] = useState(false);
   const [suggestedSong, setSuggestedSong] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   //const [email, setEmail] = useState('');
   let dto: FirebaseDto = {
@@ -41,6 +42,7 @@ const GuestForm = () => {
     writeFirebaseDto(dto)
       .then((response) => {
         console.log(response);
+        setFormSubmitted(true);
       })
       .catch((err) => {
         console.log(err);
@@ -71,7 +73,7 @@ const GuestForm = () => {
 
   function renderSuggestedSongsDom() {
     return (
-      <div className='block mt-6'>
+      <React.Fragment>
         <span className='text-center mt-6 ml-4'>Cancion 1:</span>
         <input type='text' className='peer text-center border-2 mt-3' name='suggestedSonOne' id='suggestedSonOne' minLength={2} />
 
@@ -80,45 +82,57 @@ const GuestForm = () => {
 
         <span className='text-center mt-6 ml-4'>Cancion 3:</span>
         <input type='text' className='peer text-center border-2 mt-3' name='suggestedSonThree' id='suggestedSonThree' minLength={2} />
-      </div>
+      </React.Fragment>
     );
   }
-  return (
-    <form onSubmit={handleSubmit} className='flex flex-col items-center my-8'>
-      <span className="before:content-['*'] text-center">Email:</span>
-      <input type='email' className='peer text-center border-2 mt-3 ' name='email' id='email' minLength={5} required />
-      {/* <p className='mt-3 invisible peer-required:visible text-pink-600 text-sm'>Please provide a valid email address.</p> */}
+  function renderMainForm() {
+    return (
+      <form onSubmit={handleSubmit} className='flex flex-col items-center my-8'>
+        <span className="before:content-['*'] text-center">Email:</span>
+        <input type='email' className='peer text-center border-2 mt-3 ' name='email' id='email' minLength={5} required />
+        {/* <p className='mt-3 invisible peer-required:visible text-pink-600 text-sm'>Please provide a valid email address.</p> */}
 
-      <span className="before:content-['*'] text-center mt-6 ">Nombre:</span>
-      <input type='text' className='peer text-center border-2 mt-3' name='name' id='name' minLength={2} required />
-      {/* <p className='mt-3 invisible peer-invalid:visible text-pink-600 text-sm'>Please provide a valid name.</p>
-       */}
-      <span className="before:content-['*'] text-center mt-6 ">Apellidos:</span>
-      <input type='text' className='peer text-center border-2 mt-3' name='surnames' id='surnames' minLength={2} required />
-      {/* <p className='mt-3 invisible peer-invalid:visible text-pink-600 text-sm'>Please provide a valid surname.</p> */}
+        <span className="before:content-['*'] text-center mt-6 ">Nombre:</span>
+        <input type='text' className='peer text-center border-2 mt-3' name='name' id='name' minLength={2} required />
+        {/* <p className='mt-3 invisible peer-invalid:visible text-pink-600 text-sm'>Please provide a valid name.</p>
+         */}
+        <span className="before:content-['*'] text-center mt-6 ">Apellidos:</span>
+        <input type='text' className='peer text-center border-2 mt-3' name='surnames' id='surnames' minLength={2} required />
+        {/* <p className='mt-3 invisible peer-invalid:visible text-pink-600 text-sm'>Please provide a valid surname.</p> */}
 
-      <span className='text-center mt-8 '>¿Traes acompañante?:</span>
-      <input type='checkbox' className='peer text-center border-2 mt-3 default:ring-2' name='companion' id='companion' onChange={setCompanionSelected} />
+        <span className='text-center mt-8 '>¿Traes acompañante?:</span>
+        <input type='checkbox' className='peer text-center border-2 mt-3 default:ring-2' name='companion' id='companion' onChange={setCompanionSelected} />
 
-      {companionSelected && renderGuestDom()}
+        {companionSelected && renderGuestDom()}
 
-      <span className='text-center mt-8 '>¿Alguna cancion indispensable en la boda?:</span>
-      <input
-        type='checkbox'
-        className='peer text-center border-2 mt-3 default:ring-2'
-        name='songsSuggested'
-        id='songsSuggested'
-        onChange={setSuggestedSongsSelected}
-      />
+        <span className='text-center mt-8 '>¿Alguna cancion indispensable en la boda?:</span>
+        <input
+          type='checkbox'
+          className='peer text-center border-2 mt-3 default:ring-2'
+          name='songsSuggested'
+          id='songsSuggested'
+          onChange={setSuggestedSongsSelected}
+        />
 
-      {suggestedSong && renderSuggestedSongsDom()}
-      <input
-        type='submit'
-        value='Submit'
-        className='mt-10 border-2 p-4  hover:bg-blue-100 active:bg-blue-100 focus:outline-none focus:ring focus:ring-blue-50'
-      />
-    </form>
-  );
+        {suggestedSong && renderSuggestedSongsDom()}
+        <input
+          type='submit'
+          value='Submit'
+          className='mt-10 border-2 p-4  hover:bg-blue-100 active:bg-blue-100 focus:outline-none focus:ring focus:ring-blue-50'
+        />
+      </form>
+    );
+  }
+  function renderFormSuccess() {
+    return (
+      <span className='text-center text-1xl font-bold mx-8 underline  hover:text-green-500'>
+        <h1>El formulario se envio correctamente</h1>
+        <h4> Contamos contigo en este dia tan especial</h4>
+        <p> vota vox y no te olvides</p>
+      </span>
+    );
+  }
+  return !formSubmitted ? renderMainForm() : renderFormSuccess();
 };
 
 export default GuestForm;
