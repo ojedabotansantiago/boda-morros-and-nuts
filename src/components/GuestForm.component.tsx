@@ -128,7 +128,7 @@ const GuestForm = () => {
       <span className='text-center text-1xl font-bold mx-8 underline  hover:text-green-500'>
         <h1>El formulario se envio correctamente</h1>
         <h4> Contamos contigo en este dia tan especial</h4>
-        <p> vota vox y no te olvides</p>
+        <p> y no te olvides vota a vox </p>
       </span>
     );
   }
