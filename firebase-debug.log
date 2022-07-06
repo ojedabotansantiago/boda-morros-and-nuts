@@ -1,0 +1,171 @@
+[debug] [2022-07-06T00:14:55.846Z] ----------------------------------------------------------------------
+[debug] [2022-07-06T00:14:55.848Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ojeda\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-07-06T00:14:55.849Z] CLI Version:   10.6.0
+[debug] [2022-07-06T00:14:55.849Z] Platform:      win32
+[debug] [2022-07-06T00:14:55.849Z] Node Version:  v16.14.2
+[debug] [2022-07-06T00:14:55.851Z] Time:          Wed Jul 06 2022 02:14:55 GMT+0200 (hora de verano de Europa central)
+[debug] [2022-07-06T00:14:55.851Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-06T00:14:55.927Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-06T00:14:55.927Z] > authorizing via signed-in user (ojedabotansantiago@gmail.com)
+[debug] [2022-07-06T00:14:55.927Z] [iam] checking project boda-irene-y-guillermo for permissions ["cloudconfig.configs.get","cloudconfig.configs.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2022-07-06T00:14:55.929Z] > refreshing access token with scopes: []
+[debug] [2022-07-06T00:14:55.930Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-07-06T00:14:56.032Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Wed, 06 Jul 2022 00:14:55 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-07-06T00:14:56.043Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/boda-irene-y-guillermo:testIamPermissions [none]
+[debug] [2022-07-06T00:14:56.044Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/boda-irene-y-guillermo:testIamPermissions {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2022-07-06T00:14:56.728Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/boda-irene-y-guillermo:testIamPermissions 200
+[debug] [2022-07-06T00:14:56.728Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/boda-irene-y-guillermo:testIamPermissions {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2022-07-06T00:14:56.730Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/boda-irene-y-guillermo [none]
+[debug] [2022-07-06T00:14:57.054Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/boda-irene-y-guillermo 200
+[debug] [2022-07-06T00:14:57.055Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/boda-irene-y-guillermo {"projectId":"boda-irene-y-guillermo","projectNumber":"723867071007","displayName":"boda-irene-y-guillermo","name":"projects/boda-irene-y-guillermo","resources":{"hostingSite":"boda-irene-y-guillermo","realtimeDatabaseInstance":"boda-irene-y-guillermo-default-rtdb","storageBucket":"boda-irene-y-guillermo.appspot.com","locationId":"europe-west2"},"state":"ACTIVE"}
+[debug] [2022-07-06T00:14:57.055Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/boda-irene-y-guillermo [none]
+[debug] [2022-07-06T00:14:57.259Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/boda-irene-y-guillermo 200
+[debug] [2022-07-06T00:14:57.259Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/boda-irene-y-guillermo {"projectId":"boda-irene-y-guillermo","projectNumber":"723867071007","displayName":"boda-irene-y-guillermo","name":"projects/boda-irene-y-guillermo","resources":{"hostingSite":"boda-irene-y-guillermo","realtimeDatabaseInstance":"boda-irene-y-guillermo-default-rtdb","storageBucket":"boda-irene-y-guillermo.appspot.com","locationId":"europe-west2"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'boda-irene-y-guillermo'...
+[info] 
+[info] i  deploying database, hosting, remoteconfig 
+[info] i  database: checking rules syntax... 
+[debug] [2022-07-06T00:14:57.264Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-07-06T00:14:57.264Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-07-06T00:14:57.348Z] <<< HTTP RESPONSE 200 {"date":"Wed, 06 Jul 2022 00:14:57 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-07-06T00:14:57.359Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/boda-irene-y-guillermo/locations/-/instances/boda-irene-y-guillermo-default-rtdb  
+ 
+[debug] [2022-07-06T00:14:57.638Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 06 Jul 2022 00:14:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-07-06T00:14:57.644Z] >>> HTTP REQUEST PUT https://boda-irene-y-guillermo-default-rtdb.europe-west1.firebasedatabase.app/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "now < 1659650400000",  // 2022-8-5
+    ".write": "now < 1659650400000",  // 2022-8-5
+  }
+}
+[debug] [2022-07-06T00:14:57.752Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Wed, 06 Jul 2022 00:14:57 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] +  database: rules syntax for database boda-irene-y-guillermo-default-rtdb is valid 
+[debug] [2022-07-06T00:14:57.754Z] > refreshing access token with scopes: []
+[debug] [2022-07-06T00:14:57.754Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-07-06T00:14:57.837Z] <<< HTTP RESPONSE 200 {"date":"Wed, 06 Jul 2022 00:14:57 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-07-06T00:14:57.846Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/boda-irene-y-guillermo [none]
+[debug] [2022-07-06T00:14:58.096Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/boda-irene-y-guillermo 200
+[debug] [2022-07-06T00:14:58.096Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/boda-irene-y-guillermo {"projectId":"boda-irene-y-guillermo","projectNumber":"723867071007","displayName":"boda-irene-y-guillermo","name":"projects/boda-irene-y-guillermo","resources":{"hostingSite":"boda-irene-y-guillermo","realtimeDatabaseInstance":"boda-irene-y-guillermo-default-rtdb","storageBucket":"boda-irene-y-guillermo.appspot.com","locationId":"europe-west2"},"state":"ACTIVE"}
+[debug] [2022-07-06T00:14:58.098Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/versions [none]
+[debug] [2022-07-06T00:14:58.098Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-07-06T00:14:59.460Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/versions 200
+[debug] [2022-07-06T00:14:59.460Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/versions {"name":"projects/723867071007/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-07-06T00:14:59.463Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-07-06T00:14:59.463Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-07-06T00:14:59.565Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Wed, 06 Jul 2022 00:14:59 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-07-06T00:14:59.583Z] >>> HTTP REQUEST GET https://firebaseremoteconfig.googleapis.com/v1/projects/723867071007/remoteConfig  
+ 
+[debug] [2022-07-06T00:15:00.496Z] <<< HTTP RESPONSE 200 {"etag":"etag-723867071007-15","content-type":"application/json; charset=UTF-8","vary":"Origin, X-Origin, Referer","content-encoding":"gzip","date":"Wed, 06 Jul 2022 00:15:00 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","transfer-encoding":"chunked"}
+[info] i  hosting[boda-irene-y-guillermo]: beginning deploy... 
+[info] i  hosting[boda-irene-y-guillermo]: found 24 files in out 
+[debug] [2022-07-06T00:15:00.536Z] [hosting] uploading with 200 concurrency
+[debug] [2022-07-06T00:15:00.575Z] > refreshing access token with scopes: []
+[debug] [2022-07-06T00:15:00.578Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-07-06T00:15:00.580Z] [hosting] hash cache [b3V0] stored for 24 files
+[debug] [2022-07-06T00:15:00.580Z] [hosting][hash queue][FINAL] {"max":29,"min":5,"avg":17.25,"active":0,"complete":24,"success":24,"errored":0,"retried":0,"total":24,"elapsed":40}
+[debug] [2022-07-06T00:15:00.658Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Wed, 06 Jul 2022 00:15:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-07-06T00:15:00.669Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653:populateFiles [none]
+[debug] [2022-07-06T00:15:00.669Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653:populateFiles {"files":{"/images/MainNuecesAndMorr.jpg":"1d0c307a1b7a6455647a8d29082bd1fbee35ccc3191e195ac09113c6b9558e3f","/images/p2.jpg":"a8c6c7340e8192e3c1133fe38b2b3c21dffc71a5d5b8528a61d155accb7a3c4e","/images/p3.jpg":"66a82a84144ddf3ed9e6eb16c8a6be301adcffb25fd2935d59e9025162574e60","/images/p4.jpg":"50722fb1f5c59a7b7fc199a966488b120bd55df06be294c37f293fef6f6834d2","/404.html":"7522e32d94dae99845c6c1323cc9e71d7e0f247e58d6e9677eb2bc3804a0ca67","/index.html":"8596091129b5d34c72fa9c3ecad608323d327f25174630deaebb0349939e76c7","/_next/static/chunks/788-962b0f1c15dd5e96.js":"ee02861440e06f39ddc97105cce0dd25a274fdc9ba9c4340e3e7189d123d4941","/_next/static/chunks/894.9047cda612e8fce0.js":"4c10e2f64cd88a3dd4c9b83e04a2cd054a5e5892338c1826cf111e8ce2561ae8","/_next/static/chunks/webpack-b9add18e782e1d39.js":"80e5aa8fd23f03a5240f41d6353fa5e158a1e6c84536a7d83c1c515b30f4473d","/_next/static/chunks/pages/index-396a940111c3c83c.js":"601a855c72cdc822fc4d4c3eb7aff20c2ae8d947e0457267f041e0cb3b38513b","/_next/static/css/6ca6aad59385ff98.css":"fbd6fe309f4d56844e78a03145f451b78d985b55cabfc64c87452bcaa88875d3","/_next/static/d22XWUIKfcc-ENwIEL6dw/_buildManifest.js":"1e54cfa60c0e5b1da511098e766963357e8d6c52bd5f6f5a92c43226b576a446","/_next/static/chunks/pages/_error-427958541d1e32b7.js":"d137d3fe4414c63e73f07463d9ba4d41ae17623ba1c0170d1e36ad6ec1c9e241","/_next/static/d22XWUIKfcc-ENwIEL6dw/_middlewareManifest.js":"7ffe5abf4e4bc146784f4bed8af9def708098f20983e9d0f21a6857be2613276","/_next/static/chunks/pages/_app-3700dddf3334f61a.js":"dd0b328a0fe3619d8a4de0427376e5063397468144b68cf748d20dad19491ae4","/_next/static/d22XWUIKfcc-ENwIEL6dw/_ssgManifest.js":"f73bbe5888d285cbab0ee19990a0d9db0b352fa3dfd30959d64a2bc66422d35c","/_next/static/chunks/main-8da17d2832c768a5.js":"c5cb18372dae70e40af5ae9b472436c6ca1195093b85a9e1d135356576471262","/_next/static/chunks/a198fdd9-dd09b127de69183f.js":"67af175706090f66602b7ac65787a34ef05726474bd6048a1455306fe85ff717","/_next/static/chunks/polyfills-5cd94c89d3acac5f.js":"e1731cfee79352040164e6f3ed4da821cd731b74921e5811b02f3715db413294","/_next/static/media/p2.8c33b185.jpg":"a8c6c7340e8192e3c1133fe38b2b3c21dffc71a5d5b8528a61d155accb7a3c4e","/_next/static/media/p4.a1ef0950.jpg":"50722fb1f5c59a7b7fc199a966488b120bd55df06be294c37f293fef6f6834d2","/_next/static/chunks/framework-fc97f3f1282ce3ed.js":"11030ebef52abee0f513dc0bb02502d89a66bbd2e37864f87d3692e0fa2af7a4","/_next/static/media/MainNuecesAndMorr.d56ba215.jpg":"1d0c307a1b7a6455647a8d29082bd1fbee35ccc3191e195ac09113c6b9558e3f","/_next/static/media/p3.02cd4ea5.jpg":"66a82a84144ddf3ed9e6eb16c8a6be301adcffb25fd2935d59e9025162574e60"}}
+[debug] [2022-07-06T00:15:01.823Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653:populateFiles 200
+[debug] [2022-07-06T00:15:01.823Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653:populateFiles {"uploadRequiredHashes":["80e5aa8fd23f03a5240f41d6353fa5e158a1e6c84536a7d83c1c515b30f4473d","7522e32d94dae99845c6c1323cc9e71d7e0f247e58d6e9677eb2bc3804a0ca67","1e54cfa60c0e5b1da511098e766963357e8d6c52bd5f6f5a92c43226b576a446","8596091129b5d34c72fa9c3ecad608323d327f25174630deaebb0349939e76c7","fbd6fe309f4d56844e78a03145f451b78d985b55cabfc64c87452bcaa88875d3","601a855c72cdc822fc4d4c3eb7aff20c2ae8d947e0457267f041e0cb3b38513b"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files"}
+[debug] [2022-07-06T00:15:01.825Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/80e5aa8fd23f03a5240f41d6353fa5e158a1e6c84536a7d83c1c515b30f4473d [none]
+[debug] [2022-07-06T00:15:01.825Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/80e5aa8fd23f03a5240f41d6353fa5e158a1e6c84536a7d83c1c515b30f4473d [stream]
+[debug] [2022-07-06T00:15:01.826Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/7522e32d94dae99845c6c1323cc9e71d7e0f247e58d6e9677eb2bc3804a0ca67 [none]
+[debug] [2022-07-06T00:15:01.826Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/7522e32d94dae99845c6c1323cc9e71d7e0f247e58d6e9677eb2bc3804a0ca67 [stream]
+[debug] [2022-07-06T00:15:01.827Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/1e54cfa60c0e5b1da511098e766963357e8d6c52bd5f6f5a92c43226b576a446 [none]
+[debug] [2022-07-06T00:15:01.827Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/1e54cfa60c0e5b1da511098e766963357e8d6c52bd5f6f5a92c43226b576a446 [stream]
+[debug] [2022-07-06T00:15:01.828Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/8596091129b5d34c72fa9c3ecad608323d327f25174630deaebb0349939e76c7 [none]
+[debug] [2022-07-06T00:15:01.828Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/8596091129b5d34c72fa9c3ecad608323d327f25174630deaebb0349939e76c7 [stream]
+[debug] [2022-07-06T00:15:01.829Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/fbd6fe309f4d56844e78a03145f451b78d985b55cabfc64c87452bcaa88875d3 [none]
+[debug] [2022-07-06T00:15:01.829Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/fbd6fe309f4d56844e78a03145f451b78d985b55cabfc64c87452bcaa88875d3 [stream]
+[debug] [2022-07-06T00:15:01.830Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/601a855c72cdc822fc4d4c3eb7aff20c2ae8d947e0457267f041e0cb3b38513b [none]
+[debug] [2022-07-06T00:15:01.830Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/601a855c72cdc822fc4d4c3eb7aff20c2ae8d947e0457267f041e0cb3b38513b [stream]
+[debug] [2022-07-06T00:15:01.831Z] [hosting][populate queue][FINAL] {"max":1250,"min":1250,"avg":1250,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1256}
+[debug] [2022-07-06T00:15:01.831Z] [hosting] uploads queued: 6
+[debug] [2022-07-06T00:15:03.040Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/1e54cfa60c0e5b1da511098e766963357e8d6c52bd5f6f5a92c43226b576a446 200
+[debug] [2022-07-06T00:15:03.040Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/1e54cfa60c0e5b1da511098e766963357e8d6c52bd5f6f5a92c43226b576a446 [stream]
+[debug] [2022-07-06T00:15:03.043Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/7522e32d94dae99845c6c1323cc9e71d7e0f247e58d6e9677eb2bc3804a0ca67 200
+[debug] [2022-07-06T00:15:03.043Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/7522e32d94dae99845c6c1323cc9e71d7e0f247e58d6e9677eb2bc3804a0ca67 [stream]
+[debug] [2022-07-06T00:15:03.050Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/80e5aa8fd23f03a5240f41d6353fa5e158a1e6c84536a7d83c1c515b30f4473d 200
+[debug] [2022-07-06T00:15:03.050Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/80e5aa8fd23f03a5240f41d6353fa5e158a1e6c84536a7d83c1c515b30f4473d [stream]
+[debug] [2022-07-06T00:15:03.051Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/fbd6fe309f4d56844e78a03145f451b78d985b55cabfc64c87452bcaa88875d3 200
+[debug] [2022-07-06T00:15:03.051Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/fbd6fe309f4d56844e78a03145f451b78d985b55cabfc64c87452bcaa88875d3 [stream]
+[debug] [2022-07-06T00:15:03.052Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/8596091129b5d34c72fa9c3ecad608323d327f25174630deaebb0349939e76c7 200
+[debug] [2022-07-06T00:15:03.052Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/8596091129b5d34c72fa9c3ecad608323d327f25174630deaebb0349939e76c7 [stream]
+[debug] [2022-07-06T00:15:03.055Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/601a855c72cdc822fc4d4c3eb7aff20c2ae8d947e0457267f041e0cb3b38513b 200
+[debug] [2022-07-06T00:15:03.055Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653/files/601a855c72cdc822fc4d4c3eb7aff20c2ae8d947e0457267f041e0cb3b38513b [stream]
+[debug] [2022-07-06T00:15:03.055Z] [hosting][upload queue][FINAL] {"max":1230,"min":1216,"avg":1224.1666666666667,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":1231}
+[info] +  hosting[boda-irene-y-guillermo]: file upload complete 
+[debug] [2022-07-06T00:15:03.057Z] [hosting] deploy completed after 2556ms
+[info] i  database: releasing rules... 
+[debug] [2022-07-06T00:15:03.059Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-07-06T00:15:03.059Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-07-06T00:15:03.146Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Wed, 06 Jul 2022 00:15:02 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-07-06T00:15:03.155Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/boda-irene-y-guillermo/locations/-/instances/boda-irene-y-guillermo-default-rtdb  
+ 
+[debug] [2022-07-06T00:15:03.409Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 06 Jul 2022 00:15:03 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-07-06T00:15:03.421Z] >>> HTTP REQUEST PUT https://boda-irene-y-guillermo-default-rtdb.europe-west1.firebasedatabase.app/.settings/rules.json  
+ {
+  "rules": {
+    ".read": "now < 1659650400000",  // 2022-8-5
+    ".write": "now < 1659650400000",  // 2022-8-5
+  }
+}
+[debug] [2022-07-06T00:15:03.704Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Wed, 06 Jul 2022 00:15:03 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] +  database: rules for database boda-irene-y-guillermo-default-rtdb released successfully 
+[debug] [2022-07-06T00:15:03.706Z] [
+  {
+    "config": {
+      "public": "out",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "boda-irene-y-guillermo"
+    },
+    "site": "boda-irene-y-guillermo",
+    "version": "projects/723867071007/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653"
+  }
+]
+[info] i  hosting[boda-irene-y-guillermo]: finalizing version... 
+[debug] [2022-07-06T00:15:03.706Z] > refreshing access token with scopes: []
+[debug] [2022-07-06T00:15:03.706Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-07-06T00:15:03.784Z] <<< HTTP RESPONSE 200 {"date":"Wed, 06 Jul 2022 00:15:03 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-07-06T00:15:03.794Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653 updateMask=status
+[debug] [2022-07-06T00:15:03.794Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653 {"status":"FINALIZED"}
+[debug] [2022-07-06T00:15:04.895Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653 200
+[debug] [2022-07-06T00:15:04.895Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653 {"name":"projects/723867071007/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-07-06T00:14:58.615348Z","createUser":{"email":"OjedaBotanSantiago@gmail.com"},"finalizeTime":"2022-07-06T00:15:04.583942Z","finalizeUser":{"email":"OjedaBotanSantiago@gmail.com"}}
+[debug] [2022-07-06T00:15:04.895Z] [hosting] finalized version for boda-irene-y-guillermo:[object Object]
+[info] +  hosting[boda-irene-y-guillermo]: version finalized 
+[info] i  hosting[boda-irene-y-guillermo]: releasing new version... 
+[debug] [2022-07-06T00:15:04.898Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/releases versionName=projects%2F723867071007%2Fsites%2Fboda-irene-y-guillermo%2Fversions%2Fa38f3e93a02b0653
+[debug] [2022-07-06T00:15:04.898Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/releases {"message":null}
+[debug] [2022-07-06T00:15:05.894Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/releases 200
+[debug] [2022-07-06T00:15:05.894Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/723867071007/sites/boda-irene-y-guillermo/releases {"name":"projects/723867071007/sites/boda-irene-y-guillermo/releases/1657066504859553","version":{"name":"projects/723867071007/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-07-06T00:14:58.615348Z","createUser":{"email":"OjedaBotanSantiago@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucq_ArqNBLDD6ceORv8lHzhOrneHL0JhpJ57IycZ"},"finalizeTime":"2022-07-06T00:15:04.583942Z","finalizeUser":{"email":"OjedaBotanSantiago@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucq_ArqNBLDD6ceORv8lHzhOrneHL0JhpJ57IycZ"}},"type":"DEPLOY","releaseTime":"2022-07-06T00:15:04.859553271Z","releaseUser":{"email":"OjedaBotanSantiago@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucq_ArqNBLDD6ceORv8lHzhOrneHL0JhpJ57IycZ"}}
+[debug] [2022-07-06T00:15:05.895Z] [hosting] release: {"name":"projects/723867071007/sites/boda-irene-y-guillermo/releases/1657066504859553","version":{"name":"projects/723867071007/sites/boda-irene-y-guillermo/versions/a38f3e93a02b0653","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-07-06T00:14:58.615348Z","createUser":{"email":"OjedaBotanSantiago@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucq_ArqNBLDD6ceORv8lHzhOrneHL0JhpJ57IycZ"},"finalizeTime":"2022-07-06T00:15:04.583942Z","finalizeUser":{"email":"OjedaBotanSantiago@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucq_ArqNBLDD6ceORv8lHzhOrneHL0JhpJ57IycZ"}},"type":"DEPLOY","releaseTime":"2022-07-06T00:15:04.859553271Z","releaseUser":{"email":"OjedaBotanSantiago@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucq_ArqNBLDD6ceORv8lHzhOrneHL0JhpJ57IycZ"}}
+[info] +  hosting[boda-irene-y-guillermo]: release complete 
+[debug] [2022-07-06T00:15:05.895Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-07-06T00:15:05.896Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-07-06T00:15:05.975Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Wed, 06 Jul 2022 00:15:05 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-07-06T00:15:05.983Z] >>> HTTP REQUEST GET https://firebaseremoteconfig.googleapis.com/v1/projects/723867071007/remoteConfig  
+ 
+[debug] [2022-07-06T00:15:06.908Z] <<< HTTP RESPONSE 200 {"etag":"etag-723867071007-15","content-type":"application/json; charset=UTF-8","vary":"Origin, X-Origin, Referer","content-encoding":"gzip","date":"Wed, 06 Jul 2022 00:15:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","transfer-encoding":"chunked"}
+[debug] [2022-07-06T00:15:06.909Z] >>> HTTP REQUEST PUT https://firebaseremoteconfig.googleapis.com/v1/projects/723867071007/remoteConfig  
+ {}
