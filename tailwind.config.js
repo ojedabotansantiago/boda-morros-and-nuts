@@ -11,7 +11,9 @@ module.exports = {
       }
     },
     fontFamily: {
-      "indie":[ 'Indie Flower']
+      "indie": ['Indie Flower'],
+      "sans": ['font-sans'],
+      "Hunter": ['Hunter']
     }
   },
   plugins: [],

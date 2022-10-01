@@ -17,6 +17,8 @@ const GuestForm = () => {
     guestSurnames: '',
     companionName: '',
     companionSurname: '',
+    guestComments: '',
+    guestTransport: false,
   };
 
   function handleSubmit(event: FormEvent) {
@@ -26,6 +28,9 @@ const GuestForm = () => {
     dto.guestEmail = data.email.value;
     dto.guestName = data.name.value;
     dto.guestSurnames = data.surnames.value;
+    dto.guestComments = data.comments.value;
+    debugger;
+    dto.guestTransport = data.transport.checked;
     if (companionSelected) {
       dto.companionName = data.companionName.value;
       dto.companionSurname = data.companionSurname.value;
@@ -98,26 +103,30 @@ const GuestForm = () => {
          */}
         <span className="before:content-['*'] text-center mt-6 ">Apellidos:</span>
         <input type='text' className='peer text-center border-2 mt-3' name='surnames' id='surnames' minLength={2} required />
+
+        <span className=' text-center mt-6 '>Comentarios:</span>
+        <textarea className='peer text-center border-2 mt-3' name='comments' id='comments' minLength={2} />
         {/* <p className='mt-3 invisible peer-invalid:visible text-pink-600 text-sm'>Please provide a valid surname.</p> */}
 
-        <span className='text-center mt-8 '>¿Traes acompañante?:</span>
+        {/*   <span className='text-center mt-8 '>¿Traes acompañante?:</span>
         <input type='checkbox' className='peer text-center border-2 mt-3 default:ring-2' name='companion' id='companion' onChange={setCompanionSelected} />
 
-        {companionSelected && renderGuestDom()}
+        {companionSelected && renderGuestDom()} */}
 
-        <span className='text-center mt-8 '>¿Alguna cancion indispensable en la boda?:</span>
-        <input
+        {/* <span className='text-center mt-8 '>¿Alguna cancion indispensable en la boda?:</span> */}
+        {/* <input
           type='checkbox'
           className='peer text-center border-2 mt-3 default:ring-2'
           name='songsSuggested'
           id='songsSuggested'
           onChange={setSuggestedSongsSelected}
-        />
-
-        {suggestedSong && renderSuggestedSongsDom()}
+        /> */}
+        <span className='text-center mt-8 '>¿Necesitas transporte?:</span>
+        <input type='checkbox' className='peer text-center border-2 mt-3 default:ring-2' name='transport' id='transport' />
+        {/* {suggestedSong && renderSuggestedSongsDom()} */}
         <input
           type='submit'
-          value='Submit'
+          value='Enviar'
           className='mt-10 border-2 p-4  hover:bg-blue-100 active:bg-blue-100 focus:outline-none focus:ring focus:ring-blue-50'
         />
       </form>

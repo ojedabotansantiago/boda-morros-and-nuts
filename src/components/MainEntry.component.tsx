@@ -12,13 +12,22 @@ const MainEntryComponent = (entryProps: EntryProps | any) => {
   return (
     <>
       <div className='flex flex-col items-center  mt-10'>
-        {entryProps?.textMain && <h1 className='text-center'>{entryProps?.textMain}</h1>}
+        {entryProps?.textMain && <h2 className='text-center text-2xl'>{entryProps?.textMain}</h2>}
 
-        <span className='flex items-center  mt-10'>
-          <Image src={entryProps.image} alt='Picture of the author' priority />
-        </span>
+        {entryProps?.image && (
+          <span className='flex items-center  mt-10 px-8'>
+            <Image src={entryProps.image} alt='Picture of the author' priority />
+          </span>
+        )}
 
-        {entryProps?.subtitle && <p className='text-center mt-10'>{entryProps?.subtitle}</p>}
+        {entryProps?.subtitle && entryProps?.image && <p className='text-center mt-10 px-8'>{entryProps?.subtitle}</p>}
+        {entryProps?.subtitle && !entryProps?.image && <p className='text-center px-8'>{entryProps?.subtitle}</p>}
+
+        {entryProps?.link && (
+          <a className='text-center mt-10 underline' href={entryProps?.link}>
+            {entryProps?.linkText}
+          </a>
+        )}
       </div>
     </>
   );

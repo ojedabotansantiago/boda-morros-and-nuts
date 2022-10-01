@@ -5,42 +5,49 @@ import MainEntryComponent from '../components/MainEntry.component';
 import MainTitle from '../components/Maintitle.component';
 import SeparatorComponent from '../components/separator.component';
 
-import MainNuecesAndMorr from '../public/images/MainNuecesAndMorr.jpg';
+import p1 from '../public/images/p1.jpg';
 import p2 from '../public/images/p2.jpg';
-import p3 from '../public/images/p3.jpg';
-import p4 from '../public/images/p4.jpg';
+import p3 from '../public/images/snow.jpg';
+import p4 from '../public/images/Baiona.jpg';
 
 type EntryProps = {
-  image: StaticImageData;
-  textMain: string;
+  image?: StaticImageData;
+  textMain?: string;
   subtitle: string;
+  link?: string;
+  linkText?: string;
 };
 const Home: NextPage = () => {
   // Initialize Firebase
 
   const entryPropsOne: EntryProps = {
-    image: MainNuecesAndMorr,
+    image: p1,
     textMain: '10 de Dicembre del 2022 ',
-    subtitle: 'Nuestra historia: no conocimos en hufelpuff',
+    subtitle: 'Nuestra historia: nos conocimos en hufelpuff',
   };
   const entryPropsTwo: EntryProps = {
     image: p2,
-    textMain:
-      'The thin man stepped out of the cauldron, staring at Harry . . . and Harry stared back into the face that had haunted his nightmares for three years. Whiter than a skull, with wide, livid scarlet eyes and a nose that was flat as a snakes with slits for nostrils . . .',
+    textMain: 'La ceremonia',
     subtitle:
       '"Nope," said Harry. He was looking around the graveyard. It was completely silent and slightly eerie. "Is this supposed to be part of the task?"',
+    link: 'https://goo.gl/maps/ZPFJVJTrCFxX5kbT8',
+    linkText: 'Parroquia Beato Manuel Domingo y Sol',
   };
   const entryPropsThree: EntryProps = {
     image: p3,
-    textMain: 'They saw two bucket-size cups and saucers on the wooden table in front of the fireplace when they entered Hagrids cabin.',
+    textMain: 'La celebración.',
     subtitle:
       'Ill leave Fang with yeh. Headmaster," Hagrid said, staring menacingly at Karkaroff, who was still sprawled at the foot of the tree, tangled in furs and tree roots. "Stay, Fang. Cmon, Harry.',
+    link: 'https://goo.gl/maps/sfcuob9YQ8ztmMUH8',
+    linkText: 'La Cañada de Mónico',
   };
   const entryPropsFour: EntryProps = {
     image: p4,
-    textMain: 'They saw two bucket-size cups and saucers on the wooden table in front of the fireplace when they entered Hagrids cabin.',
-    subtitle:
-      'Unlike Dumbledore, Karkaroff looked much younger; his hair and goatee were black. He was not dressed in sleek furs, but in thin and ragged robes. He was shaking. Even as Harry watched..',
+    textMain: 'Autobuses',
+    subtitle: 'Por la lejania del emplazamiento vamos a poner atubosuses a vuestra disposicion en caso de que os haga falta ',
+  };
+  const entryPropsFive: EntryProps = {
+    subtitle: 'Por si quereis tener un detalle con nostros en nuestra aventura 000000000000000000',
   };
 
   //console.log(entryPropsOne);
@@ -54,6 +61,8 @@ const Home: NextPage = () => {
       {entryPropsThree && <MainEntryComponent {...entryPropsThree}></MainEntryComponent>}
       <SeparatorComponent></SeparatorComponent>
       {entryPropsFour && <MainEntryComponent {...entryPropsFour}></MainEntryComponent>}
+      <SeparatorComponent></SeparatorComponent>
+      {entryPropsFive && <MainEntryComponent {...entryPropsFive}></MainEntryComponent>}
       <SeparatorComponent></SeparatorComponent>
       <GuestForm></GuestForm>
     </div>
