@@ -14,7 +14,7 @@ type EntryProps = {
   firstStep?: boolean;
   image?: StaticImageData;
   textMain?: string;
-  subtitle: string;
+  subtitle?: string;
   secondaryText?: string;
   tertiaryText?: string;
   link?: string;
@@ -59,8 +59,9 @@ const Home: NextPage = () => {
       'Os rogamos que nos indiquéis si vais a necesitar transporte de ida, de vuelta o ambos, para poder organizar los autobuses y que nadie se quede en tierra.',
   };
   const entryPropsFive: EntryProps = {
-    subtitle: 'Vuestra presencia es nuestro mejor regalo, pero si aun así queréis tener un detalle con nosotros os dejamos nuestro número de cuenta por aquí:',
-    secondaryText: 'ES92 1465 0100 91 1747418260',
+    secondaryText:
+      'Vuestra presencia es nuestro mejor regalo, pero si aun así queréis tener un detalle con nosotros os dejamos nuestro número de cuenta por aquí:',
+    tertiaryText: 'ES92 1465 0100 91 1747418260',
   };
 
   //console.log(entryPropsOne);

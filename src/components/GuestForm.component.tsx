@@ -29,7 +29,6 @@ const GuestForm = () => {
     dto.guestName = data.name.value;
     dto.guestSurnames = data.surnames.value;
     dto.guestComments = data.comments.value;
-    debugger;
     dto.guestTransport = data.transport.checked;
     if (companionSelected) {
       dto.companionName = data.companionName.value;
@@ -43,7 +42,6 @@ const GuestForm = () => {
     saveForm();
   }
   function saveForm() {
-    debugger;
     writeFirebaseDto(dto)
       .then((response) => {
         console.log(response);
@@ -93,6 +91,7 @@ const GuestForm = () => {
   function renderMainForm() {
     return (
       <form onSubmit={handleSubmit} className='flex flex-col items-center my-8'>
+        <h2 className='text-center text-1xl pb-8 '>Formulario de asistencia</h2>
         <span className="before:content-['*'] text-center">Email:</span>
         <input type='email' className='peer text-center border-2 mt-3 ' name='email' id='email' minLength={5} required />
         {/* <p className='mt-3 invisible peer-required:visible text-pink-600 text-sm'>Please provide a valid email address.</p> */}
@@ -121,7 +120,7 @@ const GuestForm = () => {
           id='songsSuggested'
           onChange={setSuggestedSongsSelected}
         /> */}
-        <span className='text-center mt-8 '>¿Necesitas transporte?:</span>
+        <span className='text-center mt-8 px-6 '>Marca la casilla a continuación para indicar que vas a necesitar transporte:</span>
         <input type='checkbox' className='peer text-center border-2 mt-3 default:ring-2' name='transport' id='transport' />
         {/* {suggestedSong && renderSuggestedSongsDom()} */}
         <input
@@ -137,7 +136,8 @@ const GuestForm = () => {
       <span className='text-center text-1xl font-bold mx-8 underline  hover:text-green-500'>
         <h1>El formulario de asistencia se envio correctamente.</h1>
         <h4> Contamos contigo en este dia tan especial.</h4>
-        <p> Muchas gracias </p>
+        <h4> Nos vemos el 10 de Dicembre del 2022.</h4>
+        <p> Muchas gracias.</p>
       </span>
     );
   }
