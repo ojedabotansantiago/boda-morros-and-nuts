@@ -104,7 +104,7 @@ const GuestForm = () => {
         <span className="before:content-['*'] text-center mt-6 ">Apellidos:</span>
         <input type='text' className='peer text-center border-2 mt-3' name='surnames' id='surnames' minLength={2} required />
 
-        <span className=' text-center mt-6 '>Comentarios:</span>
+        <span className=' text-center mt-6 '>Alergenos o intolerancias:</span>
         <textarea className='peer text-center border-2 mt-3' name='comments' id='comments' minLength={2} />
         {/* <p className='mt-3 invisible peer-invalid:visible text-pink-600 text-sm'>Please provide a valid surname.</p> */}
 
@@ -135,9 +135,9 @@ const GuestForm = () => {
   function renderFormSuccess() {
     return (
       <span className='text-center text-1xl font-bold mx-8 underline  hover:text-green-500'>
-        <h1>El formulario se envio correctamente</h1>
-        <h4> Contamos contigo en este dia tan especial</h4>
-        <p> y no te olvides vota a vox </p>
+        <h1>El formulario de asistencia se envio correctamente.</h1>
+        <h4> Contamos contigo en este dia tan especial.</h4>
+        <p> Muchas gracias </p>
       </span>
     );
   }

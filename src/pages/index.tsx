@@ -11,9 +11,12 @@ import p3 from '../public/images/snow.jpg';
 import p4 from '../public/images/Baiona.jpg';
 
 type EntryProps = {
+  firstStep?: boolean;
   image?: StaticImageData;
   textMain?: string;
   subtitle: string;
+  secondaryText?: string;
+  tertiaryText?: string;
   link?: string;
   linkText?: string;
 };
@@ -21,33 +24,43 @@ const Home: NextPage = () => {
   // Initialize Firebase
 
   const entryPropsOne: EntryProps = {
+    firstStep: true,
     image: p1,
-    textMain: '10 de Dicembre del 2022 ',
-    subtitle: 'Nuestra historia: nos conocimos en hufelpuff',
+    subtitle:
+      'Quién nos iba a decir, en ese Club Deportivo de Rugby Químicas de la universidad donde nos vimos por primera vez, que acabaríamos dándonos el ‘’Sí, quiero’’',
+    secondaryText:
+      'Tras más de 8 años de aventuras juntos, hemos decidido dar el gran paso y si has recibido este   enlace, es por que eres especial para nosotros y queremos compartir contigo este día tan importante para nosotros.',
   };
   const entryPropsTwo: EntryProps = {
     image: p2,
     textMain: 'La ceremonia',
-    subtitle:
-      '"Nope," said Harry. He was looking around the graveyard. It was completely silent and slightly eerie. "Is this supposed to be part of the task?"',
+    subtitle: 'La ceremonia será religiosa y se celebrará en la Parroquia Beato Manuel Domingo y Sol a las 12:30 horas.',
+    secondaryText: 'La Parroquia se encuentra en la Calle Pablo Picasso 4. 28222 Majadahonda, Madrid.',
+    tertiaryText: 'Os dejamos por aquí abajo en enlace a Google Maps:',
     link: 'https://goo.gl/maps/ZPFJVJTrCFxX5kbT8',
     linkText: 'Parroquia Beato Manuel Domingo y Sol',
   };
   const entryPropsThree: EntryProps = {
     image: p3,
     textMain: 'La celebración.',
-    subtitle:
-      'Ill leave Fang with yeh. Headmaster," Hagrid said, staring menacingly at Karkaroff, who was still sprawled at the foot of the tree, tangled in furs and tree roots. "Stay, Fang. Cmon, Harry.',
+    subtitle: 'Después de la ceremonia, iremos a celebrarlo a La Cañada de Mónico.',
+    secondaryText: 'La finca se encuentra en el Km. 1,600, M-533, kilómetro 1-600, 28211 Peralejo, Madrid.',
+    tertiaryText:
+      'Os dejamos el enlace a Google Maps: Os rogamos que indiquéis en el formulario final si tenéis cualquier alergia o intolerancia para adaptar el menú a vuestras necesidades y evitar un susto.',
     link: 'https://goo.gl/maps/sfcuob9YQ8ztmMUH8',
     linkText: 'La Cañada de Mónico',
   };
   const entryPropsFour: EntryProps = {
     image: p4,
     textMain: 'Autobuses',
-    subtitle: 'Por la lejania del emplazamiento vamos a poner atubosuses a vuestra disposicion en caso de que os haga falta ',
+    subtitle: 'Dispondremos de servicio de autobuses que nos llevarán desde la Parroquia Beato Manuel Domingo y Sol hasta la finca La Cañada de Mónico.',
+    secondaryText: 'Al terminar la boda, también habrá autobuses de vuelta, desde La Cañada de Mónico hasta la Parroquia Beato Manuel Domingo y Sol.',
+    tertiaryText:
+      'Os rogamos que nos indiquéis si vais a necesitar transporte de ida, de vuelta o ambos, para poder organizar los autobuses y que nadie se quede en tierra.',
   };
   const entryPropsFive: EntryProps = {
-    subtitle: 'Por si quereis tener un detalle con nostros en nuestra aventura 000000000000000000',
+    subtitle: 'Vuestra presencia es nuestro mejor regalo, pero si aun así queréis tener un detalle con nosotros os dejamos nuestro número de cuenta por aquí:',
+    secondaryText: 'ES92 1465 0100 91 1747418260',
   };
 
   //console.log(entryPropsOne);
