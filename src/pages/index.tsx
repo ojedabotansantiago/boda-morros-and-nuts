@@ -68,7 +68,8 @@ const Home: NextPage = () => {
 
   //console.log(entryPropsOne);
   return (
-    <div className='text-regal-blue'>
+    /*  <div className='bg-mark-image'> */
+    <div>
       <MainTitle></MainTitle>
       {entryPropsOne && <MainEntryComponent {...entryPropsOne}></MainEntryComponent>}
       <SeparatorComponent></SeparatorComponent>

@@ -7,7 +7,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'regal-blue': '#535373',
+        'regal-blue': '#000000',
+      },
+      backgroundImage: {
+        'mark-image': "url('../public/images/bakcground.jpeg')",
+        'luces-image': "url('../public/images/luces.jpeg')"
       }
     },
     fontFamily: {
