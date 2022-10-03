@@ -157,10 +157,12 @@ const GuestForm = () => {
   }
   function renderFormError() {
     return (
-      <span className='text-center text-1xl font-bold mx-8 underline  text-red-500'>
+      <span className='text-center text-1xl font-bold mx-8 text-red-500'>
         <h1>Hemos encontrado un problema al enviar los datos del formulario.</h1>
         <h4> Por favor ponte en contacto con nostros a traves del correo.</h4>
-        <h4> irenerorod@gmail.com o guiarrosan@gmail.com</h4>
+        <a className='underline' href='mailto:irenerorod@gmail.com,guiarrosan@gmail.com?Subject=Confirmación%20Asistencia%20boda%20Irene%20y%20Guillermo'>
+          irenerorod@gmail.com o guiarrosan@gmail.com
+        </a>
         <p> Muchas gracias y perdona las molestias.</p>
       </span>
     );
