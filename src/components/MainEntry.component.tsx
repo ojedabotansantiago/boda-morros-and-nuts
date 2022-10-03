@@ -21,7 +21,7 @@ const MainEntryComponent = (entryProps: EntryProps | any) => {
         {entryProps?.textMain && <h2 className='text-center text-2xl'>{entryProps?.textMain}</h2>}
 
         {entryProps?.image && (
-          <span className={`flex items-center px-8 ${!entryProps.firstStep ? 'mt-10 ' : ''}`}>
+          <span className={`flex items-center px-8 max-w-xl max-w-lg ${!entryProps.firstStep ? 'mt-10 ' : ''}`}>
             <Image src={entryProps.image} alt='Picture of the author' priority />
           </span>
         )}
