@@ -18,7 +18,8 @@ const GuestForm = () => {
     companionName: '',
     companionSurname: '',
     guestComments: '',
-    guestTransport: false,
+    guestTransportGo: false,
+    guestTransportBack: false,
   };
 
   function handleSubmit(event: FormEvent) {
@@ -29,15 +30,16 @@ const GuestForm = () => {
     dto.guestName = data.name.value;
     dto.guestSurnames = data.surnames.value;
     dto.guestComments = data.comments.value;
-    dto.guestTransport = data.transport.checked;
-    if (companionSelected) {
+    dto.guestTransportGo = data.transportGo.checked;
+    dto.guestTransportBack = data.transportBack.checked;
+    /* if (companionSelected) {
       dto.companionName = data.companionName.value;
       dto.companionSurname = data.companionSurname.value;
-    }
-    if (suggestedSong) {
+    } */
+    /* if (suggestedSong) {
       const dirtySongsList = [data.suggestedSonOne?.value, data?.suggestedSonTwo?.value, data?.suggestedSonThree?.value];
       dto.songs = dirtySongsList.filter(Boolean);
-    }
+    } */
     console.log(dto);
     saveForm();
   }
@@ -103,7 +105,7 @@ const GuestForm = () => {
         <span className="before:content-['*'] text-center mt-6 ">Apellidos:</span>
         <input type='text' className='peer text-center border-2 mt-3' name='surnames' id='surnames' minLength={2} required />
 
-        <span className=' text-center mt-6 '>Alergenos o intolerancias:</span>
+        <span className=' text-center mt-6 '>Alérgenos o intolerancias:</span>
         <textarea className='peer text-center border-2 mt-3' name='comments' id='comments' minLength={2} />
         {/* <p className='mt-3 invisible peer-invalid:visible text-pink-600 text-sm'>Please provide a valid surname.</p> */}
 
@@ -120,8 +122,16 @@ const GuestForm = () => {
           id='songsSuggested'
           onChange={setSuggestedSongsSelected}
         /> */}
-        <span className='text-center mt-8 px-6 '>Marca la casilla a continuación para indicar que vas a necesitar transporte:</span>
-        <input type='checkbox' className='peer text-center border-2 mt-3 default:ring-2' name='transport' id='transport' />
+
+        <p className='text-center mt-8 px-6 '>Marca la casilla a continuación para indicar que vas a necesitar transporte de:</p>
+
+        <div className='grid gap-2 grid-cols-2 grid-rows-2 mt-6'>
+          <span className='font-bold mt-1'>Ida:</span>
+          <input type='checkbox' className='peer text-center border-2 default:ring-2' name='transportGo' id='transportGo' />
+          <span className='font-bold mt-1'>Vuelta:</span>
+          <input type='checkbox' className='peer text-center border-2 default:ring-2' name='transportBack' id='transportBack' />
+        </div>
+
         {/* {suggestedSong && renderSuggestedSongsDom()} */}
         <input
           type='submit'

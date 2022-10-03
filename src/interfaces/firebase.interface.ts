@@ -1,10 +1,11 @@
 export interface FirebaseDto {
-  guestTransport: boolean;
+  guestTransportGo: boolean;
+  guestTransportBack: boolean;
   guestEmail: string;
   guestName: string;
   guestSurnames: string;
-  companionName: string;
-  companionSurname: string;
+  companionName?: string;
+  companionSurname?: string;
   songs?: string[];
   guestComments?: string;
 }

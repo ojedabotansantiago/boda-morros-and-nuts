@@ -17,6 +17,7 @@ type EntryProps = {
   subtitle?: string;
   secondaryText?: string;
   tertiaryText?: string;
+  frothyText?: string;
   link?: string;
   linkText?: string;
 };
@@ -29,7 +30,7 @@ const Home: NextPage = () => {
     subtitle:
       'Quién nos iba a decir, en ese Club Deportivo de Rugby Químicas de la universidad donde nos vimos por primera vez, que acabaríamos dándonos el ‘’Sí, quiero’’',
     secondaryText:
-      'Tras más de 8 años de aventuras juntos, hemos decidido dar el gran paso y si has recibido este   enlace, es por que eres especial para nosotros y queremos compartir contigo este día tan importante para nosotros.',
+      'Tras más de 8 años de aventuras juntos, hemos decidido dar el gran paso y si has recibido este   enlace, es porque eres especial para nosotros y queremos compartir contigo este día tan importante.',
   };
   const entryPropsTwo: EntryProps = {
     image: p2,
@@ -46,7 +47,8 @@ const Home: NextPage = () => {
     subtitle: 'Después de la ceremonia, iremos a celebrarlo a La Cañada de Mónico.',
     secondaryText: 'La finca se encuentra en el Km. 1,600, M-533, kilómetro 1-600, 28211 Peralejo, Madrid.',
     tertiaryText:
-      'Os dejamos el enlace a Google Maps: Os rogamos que indiquéis en el formulario final si tenéis cualquier alergia o intolerancia para adaptar el menú a vuestras necesidades y evitar un susto.',
+      'Os rogamos que indiquéis en el formulario final si tenéis cualquier alergia o intolerancia para adaptar el menú a vuestras necesidades y evitar un susto.',
+    frothyText: 'Os dejamos el enlace a Google Maps:',
     link: 'https://goo.gl/maps/sfcuob9YQ8ztmMUH8',
     linkText: 'La Cañada de Mónico',
   };

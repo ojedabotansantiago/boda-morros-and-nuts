@@ -7,6 +7,7 @@ type EntryProps = {
   subtitle: string;
   secondaryText?: string;
   tertiaryText?: string;
+  frothyText?: string;
   link?: string;
   linkText?: string;
   firstStep?: boolean;
@@ -28,10 +29,12 @@ const MainEntryComponent = (entryProps: EntryProps | any) => {
         {entryProps?.subtitle && <p className='text-center mt-10 px-8'>{entryProps?.subtitle}</p>}
 
         {entryProps?.secondaryText && <p className='text-center mt-6 px-8'>{entryProps?.secondaryText}</p>}
+
         {entryProps?.tertiaryText && <p className='text-center mt-6 px-8'>{entryProps?.tertiaryText}</p>}
+        {entryProps?.frothyText && <p className='text-center mt-6 px-8'>{entryProps?.frothyText}</p>}
 
         {entryProps?.link && (
-          <a className='text-center mt-6 underline' href={entryProps?.link}>
+          <a className='text-center mt-6 underline hover:underline' href={entryProps?.link}>
             {entryProps?.linkText}
           </a>
         )}
