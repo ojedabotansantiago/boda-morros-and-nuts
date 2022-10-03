@@ -9,14 +9,13 @@ const GuestForm = () => {
   const [companionSelected, setDataCompanionCheckboxChange] = useState(false);
   const [suggestedSong, setSuggestedSong] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formSendedWithError, setFormError] = useState(false);
 
   //const [email, setEmail] = useState('');
   let dto: FirebaseDto = {
     guestEmail: '',
     guestName: '',
     guestSurnames: '',
-    companionName: '',
-    companionSurname: '',
     guestComments: '',
     guestTransportGo: false,
     guestTransportBack: false,
@@ -51,6 +50,7 @@ const GuestForm = () => {
       })
       .catch((err) => {
         console.log(err);
+        setFormError(true);
       });
   }
 
@@ -133,11 +133,15 @@ const GuestForm = () => {
         </div>
 
         {/* {suggestedSong && renderSuggestedSongsDom()} */}
-        <input
-          type='submit'
-          value='Enviar'
-          className='mt-10 border-2 p-4  hover:bg-blue-100 active:bg-blue-100 focus:outline-none focus:ring focus:ring-blue-50'
-        />
+        {formSendedWithError && renderFormError()}
+
+        {!formSendedWithError && (
+          <input
+            type='submit'
+            value='Enviar'
+            className='mt-10 border-2 p-4  hover:bg-blue-100 active:bg-blue-100 focus:outline-none focus:ring focus:ring-blue-50'
+          />
+        )}
       </form>
     );
   }
@@ -145,9 +149,19 @@ const GuestForm = () => {
     return (
       <span className='text-center text-1xl font-bold mx-8 underline  hover:text-green-500'>
         <h1>El formulario de asistencia se envio correctamente.</h1>
-        <h4> Contamos contigo en este dia tan especial.</h4>
+        <h4> Contamos contigo para este dia tan especial.</h4>
         <h4> Nos vemos el 10 de Dicembre del 2022.</h4>
         <p> Muchas gracias.</p>
+      </span>
+    );
+  }
+  function renderFormError() {
+    return (
+      <span className='text-center text-1xl font-bold mx-8 underline  text-red-500'>
+        <h1>Hemos encontrado un problema al enviar los datos del formulario.</h1>
+        <h4> Por favor ponte en contacto con nostros a traves del correo.</h4>
+        <h4> irenerorod@gmail.com o guiarrosan@gmail.com</h4>
+        <p> Muchas gracias y perdona las molestias.</p>
       </span>
     );
   }
