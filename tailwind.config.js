@@ -11,13 +11,17 @@ module.exports = {
       },
       backgroundImage: {
         'mark-image': "url('../public/images/bakcground.jpeg')",
-        'luces-image': "url('../public/images/luces.jpeg')"
+        'luces-image': "url('../public/images/luces.jpeg')",
+        'luces-back-image': "url('../public/images/lucesv.jpg')"
       }
     },
     fontFamily: {
       "indie": ['Indie Flower'],
       "sans": ['font-sans'],
-      "Hunter": ['Hunter']
+      "Hunter": ['Hunter'],
+      "Montserrat": ['Montserrat'],
+      "passion-conflict": ['Passions-Conflict', 'cursive'],
+      "cursive": ['cursive']
     }
   },
   plugins: [],
