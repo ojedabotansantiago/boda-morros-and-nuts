@@ -10,9 +10,14 @@ import p2 from '../public/images/p2.jpg';
 import p3 from '../public/images/snow.jpg';
 import p4 from '../public/images/Baiona.jpg';
 
+import t2 from '../public/images/ceremony.jpg';
+import t3 from '../public/images/celebration.jpg';
+import t4 from '../public/images/buses.jpg';
+
 type EntryProps = {
   firstStep?: boolean;
   image?: StaticImageData;
+  titleImage?: StaticImageData;
   textMain?: string;
   subtitle?: string;
   secondaryText?: string;
@@ -34,6 +39,7 @@ const Home: NextPage = () => {
   };
   const entryPropsTwo: EntryProps = {
     image: p2,
+    titleImage: t2,
     textMain: 'La ceremonia',
     subtitle: 'La ceremonia será religiosa y se celebrará en la Parroquia Beato Manuel Domingo y Sol a las 12:30 horas.',
     secondaryText: 'La Parroquia se encuentra en la Calle Pablo Picasso 4. 28222 Majadahonda, Madrid.',
@@ -43,6 +49,7 @@ const Home: NextPage = () => {
   };
   const entryPropsThree: EntryProps = {
     image: p3,
+    titleImage: t3,
     textMain: 'La celebración',
     subtitle: 'Después de la ceremonia, iremos a celebrarlo a La Cañada de Mónico.',
     secondaryText: 'La finca se encuentra en el Km. 1,600, M-533, kilómetro 1-600, 28211 Peralejo, Madrid.',
@@ -54,6 +61,7 @@ const Home: NextPage = () => {
   };
   const entryPropsFour: EntryProps = {
     image: p4,
+    titleImage: t4,
     textMain: 'Autobuses',
     subtitle: 'Dispondremos de servicio de autobuses que nos llevarán desde la Parroquia Beato Manuel Domingo y Sol hasta la finca La Cañada de Mónico.',
     secondaryText: 'Al terminar la boda, también habrá autobuses de vuelta, desde La Cañada de Mónico hasta la Parroquia Beato Manuel Domingo y Sol.',

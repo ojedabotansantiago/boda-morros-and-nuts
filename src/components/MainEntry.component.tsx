@@ -3,6 +3,7 @@ import { StaticImageData } from 'next/image';
 
 type EntryProps = {
   image?: StaticImageData;
+  titleImage?: StaticImageData;
   textMain?: string;
   subtitle: string;
   secondaryText?: string;
@@ -18,8 +19,14 @@ const MainEntryComponent = (entryProps: EntryProps | any) => {
   return (
     <>
       <div className='flex flex-col items-center  mt-10'>
-        {entryProps?.textMain && <h2 className='text-center font-passion-conflict text-2xl'>~ {entryProps?.textMain} ~</h2>}
-
+        {/*  
+        { entryProps?.textMain && <h2 className='text-center font-passion-conflict italic text-2xl'>~ {entryProps?.textMain} ~</h2>}
+      */}
+        {entryProps?.titleImage && (
+          <span className='items-center px-12 max-w-xl max-w-lg'>
+            <Image src={entryProps.titleImage} alt='Picture of the author' priority />
+          </span>
+        )}
         {entryProps?.image && (
           <span className={`flex items-center px-8 max-w-xl max-w-lg ${!entryProps.firstStep ? 'mt-10 ' : ''}`}>
             <Image src={entryProps.image} alt='Picture of the author' priority />

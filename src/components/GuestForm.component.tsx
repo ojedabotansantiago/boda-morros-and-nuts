@@ -93,7 +93,7 @@ const GuestForm = () => {
   function renderMainForm() {
     return (
       <form onSubmit={handleSubmit} className='flex flex-col items-center my-8'>
-        <h2 className='text-center text-1xl pb-8 '>Formulario de asistencia</h2>
+        <h2 className='text-center pb-8 text-center font-passion-conflict italic text-2xl '>~ Formulario de asistencia ~</h2>
         <span className="before:content-['*'] text-center">Email:</span>
         <input type='email' className='peer text-center border-2 mt-3 ' name='email' id='email' minLength={5} required />
         {/* <p className='mt-3 invisible peer-required:visible text-pink-600 text-sm'>Please provide a valid email address.</p> */}
