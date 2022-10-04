@@ -18,7 +18,7 @@ const MainEntryComponent = (entryProps: EntryProps | any) => {
   return (
     <>
       <div className='flex flex-col items-center  mt-10'>
-        {entryProps?.textMain && <h2 className='text-center text-2xl'>{entryProps?.textMain}</h2>}
+        {entryProps?.textMain && <h2 className='text-center font-passion-conflict text-2xl'>~ {entryProps?.textMain} ~</h2>}
 
         {entryProps?.image && (
           <span className={`flex items-center px-8 max-w-xl max-w-lg ${!entryProps.firstStep ? 'mt-10 ' : ''}`}>

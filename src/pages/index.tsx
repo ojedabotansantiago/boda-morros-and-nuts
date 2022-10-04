@@ -43,7 +43,7 @@ const Home: NextPage = () => {
   };
   const entryPropsThree: EntryProps = {
     image: p3,
-    textMain: 'La celebración.',
+    textMain: 'La celebración',
     subtitle: 'Después de la ceremonia, iremos a celebrarlo a La Cañada de Mónico.',
     secondaryText: 'La finca se encuentra en el Km. 1,600, M-533, kilómetro 1-600, 28211 Peralejo, Madrid.',
     tertiaryText:
