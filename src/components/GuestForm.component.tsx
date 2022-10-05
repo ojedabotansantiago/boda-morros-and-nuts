@@ -3,9 +3,9 @@ import React from 'react';
 import { EventHandler, FormEvent, useState } from 'react';
 import { FirebaseDto } from '../interfaces/firebase.interface';
 import { writeFirebaseDto } from '../services/firebase.service';
+import titleImage from '../public/images/formulary.jpeg';
 
 const GuestForm = () => {
-  console.log('GuestForm');
   const [companionSelected, setDataCompanionCheckboxChange] = useState(false);
   const [suggestedSong, setSuggestedSong] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -39,7 +39,6 @@ const GuestForm = () => {
       const dirtySongsList = [data.suggestedSonOne?.value, data?.suggestedSonTwo?.value, data?.suggestedSonThree?.value];
       dto.songs = dirtySongsList.filter(Boolean);
     } */
-    console.log(dto);
     saveForm();
   }
   function saveForm() {
@@ -93,7 +92,12 @@ const GuestForm = () => {
   function renderMainForm() {
     return (
       <form onSubmit={handleSubmit} className='flex flex-col items-center my-8'>
-        <h2 className='text-center pb-8 text-center font-passion-conflict italic text-2xl '>~ Formulario de asistencia ~</h2>
+        {/* <h2 className='text-center pb-8 text-center font-passion-conflict italic text-2xl '>~ Formulario de asistencia ~</h2> */}
+
+        <div className='flex justify-center px-8 pb-8 max-w-lg  bg-pack-train'>
+          <Image className='items-center max-w-xl ' src={titleImage} alt='Picture of the author' priority />
+        </div>
+
         <span className="before:content-['*'] text-center">Email:</span>
         <input type='email' className='peer text-center border-2 mt-3 ' name='email' id='email' minLength={5} required />
         {/* <p className='mt-3 invisible peer-required:visible text-pink-600 text-sm'>Please provide a valid email address.</p> */}
@@ -139,7 +143,7 @@ const GuestForm = () => {
           <input
             type='submit'
             value='Enviar'
-            className='mt-10 border-2 p-4  hover:bg-blue-100 active:bg-blue-100 focus:outline-none focus:ring focus:ring-blue-50'
+            className='mt-10 border-2 py-4 px-8 hover:bg-blue-100 active:bg-blue-100 focus:outline-none focus:ring focus:ring-blue-50'
           />
         )}
       </form>

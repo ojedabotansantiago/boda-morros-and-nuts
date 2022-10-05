@@ -74,7 +74,6 @@ const Home: NextPage = () => {
     tertiaryText: 'ES92 1465 0100 91 1747418260',
   };
 
-  //console.log(entryPropsOne);
   return (
     /*  <div className='bg-mark-image'> */
     <div>
