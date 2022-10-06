@@ -91,7 +91,7 @@ const GuestForm = () => {
   }
   function renderMainForm() {
     return (
-      <form onSubmit={handleSubmit} className='flex flex-col items-center my-8'>
+      <form onSubmit={handleSubmit} className='flex flex-col items-center my-8 font-Monserrat'>
         {/* <h2 className='text-center pb-8 text-center font-passion-conflict italic text-2xl '>~ Formulario de asistencia ~</h2> */}
 
         <div className='flex justify-center px-8 pb-8 max-w-lg  bg-pack-train'>
@@ -151,7 +151,7 @@ const GuestForm = () => {
   }
   function renderFormSuccess() {
     return (
-      <span className='text-center text-1xl font-bold mt-8 px-8 underline  hover:text-green-500'>
+      <span className='text-center text-1xl font-bold mt-8 px-8 underline  hover:text-green-500 font-Monserrat'>
         <h1>El formulario de asistencia se envio correctamente.</h1>
         <h4> Contamos contigo para este dia tan especial.</h4>
         <h4> Nos vemos el 10 de Dicembre del 2022.</h4>
@@ -161,7 +161,7 @@ const GuestForm = () => {
   }
   function renderFormError() {
     return (
-      <span className='text-center text-1xl mt-8 px-8 font-bold mx-8 text-red-500'>
+      <span className='text-center text-1xl mt-8 px-8 font-bold mx-8 text-red-500 font-Monserrat'>
         <h1>Hemos encontrado un problema al enviar los datos del formulario.</h1>
         <h4> Por favor ponte en contacto con nostros a traves del correo.</h4>
         <a className='underline' href='mailto:irenerorod@gmail.com,guiarrosan@gmail.com?Subject=Confirmación%20Asistencia%20boda%20Irene%20y%20Guillermo'>

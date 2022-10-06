@@ -16,7 +16,7 @@ type EntryProps = {
 const MainEntryComponent = (entryProps: EntryProps | any) => {
   return (
     <>
-      <div className='flex flex-col items-center  mt-10'>
+      <div className='flex flex-col items-center  mt-10 font-Monserrat'>
         {/*  
         { entryProps?.textMain && <h2 className='text-center font-passion-conflict italic text-2xl'>~ {entryProps?.textMain} ~</h2>}
       */}

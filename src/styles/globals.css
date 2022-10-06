@@ -8,12 +8,20 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Montserrat-Italic', sans-serif";
+  src: url('./fonts/Montserrat-Italic-VariableFont_wght.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
   html {
     font-family: "Montserrat', sans-serif";
     src: url('./fonts/Montserrat-VariableFont_wght.ttf');
   }
 }
+
 
 
   

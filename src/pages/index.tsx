@@ -33,7 +33,7 @@ const Home: NextPage = () => {
     firstStep: true,
     image: p1,
     subtitle:
-      'Quién nos iba a decir, en ese Club Deportivo de Rugby Químicas de la universidad donde nos vimos por primera vez, que acabaríamos dándonos el ‘’Sí, quiero’’',
+      'Quién nos iba a decir, en ese Club Deportivo de Rugby Químicas de la universidad donde nos vimos por primera vez, que acabaríamos dándonos el "Sí, quiero".',
     secondaryText:
       'Tras más de 8 años de aventuras juntos, hemos decidido dar el gran paso y si has recibido este   enlace, es porque eres especial para nosotros y queremos compartir contigo este día tan importante.',
   };
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
     secondaryText: 'La Parroquia se encuentra en la Calle Pablo Picasso 4. 28222 Majadahonda, Madrid.',
     tertiaryText: 'Os dejamos por aquí abajo en enlace a Google Maps:',
     link: 'https://goo.gl/maps/ZPFJVJTrCFxX5kbT8',
-    linkText: 'Parroquia Beato Manuel Domingo y Sol',
+    linkText: 'Parroquia Beato Manuel Domingo y Sol.',
   };
   const entryPropsThree: EntryProps = {
     image: p3,
@@ -57,7 +57,7 @@ const Home: NextPage = () => {
       'Os rogamos que indiquéis en el formulario final si tenéis cualquier alergia o intolerancia para adaptar el menú a vuestras necesidades y evitar un susto.',
     frothyText: 'Os dejamos el enlace a Google Maps:',
     link: 'https://goo.gl/maps/sfcuob9YQ8ztmMUH8',
-    linkText: 'La Cañada de Mónico',
+    linkText: 'La Cañada de Mónico.',
   };
   const entryPropsFour: EntryProps = {
     image: p4,
