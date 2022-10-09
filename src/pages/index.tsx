@@ -35,7 +35,7 @@ const Home: NextPage = () => {
     subtitle:
       'Quién nos iba a decir, en ese Club Deportivo de Rugby Químicas de la universidad donde nos vimos por primera vez, que acabaríamos dándonos el "Sí, quiero".',
     secondaryText:
-      'Tras más de 8 años de aventuras juntos, hemos decidido dar el gran paso y si has recibido este   enlace, es porque eres especial para nosotros y queremos compartir contigo este día tan importante.',
+      'Tras más de 8 años de aventuras juntos, hemos decidido dar el gran paso y si has recibido este enlace es porque eres especial para nosotros y queremos compartir contigo este día tan importante.',
   };
   const entryPropsTwo: EntryProps = {
     image: p2,

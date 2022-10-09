@@ -98,15 +98,15 @@ const GuestForm = () => {
           <Image className='items-center max-w-xl ' src={titleImage} alt='Picture of the author' priority />
         </div>
 
-        <span className="before:content-['*'] text-center">Email:</span>
+        <span className='text-center'>Email:</span>
         <input type='email' className='peer text-center border-2 mt-3 ' name='email' id='email' minLength={5} required />
         {/* <p className='mt-3 invisible peer-required:visible text-pink-600 text-sm'>Please provide a valid email address.</p> */}
 
-        <span className="before:content-['*'] text-center mt-6 ">Nombre:</span>
+        <span className='text-center mt-6 '>Nombre:</span>
         <input type='text' className='peer text-center border-2 mt-3' name='name' id='name' minLength={2} required />
         {/* <p className='mt-3 invisible peer-invalid:visible text-pink-600 text-sm'>Please provide a valid name.</p>
          */}
-        <span className="before:content-['*'] text-center mt-6 ">Apellidos:</span>
+        <span className='text-center mt-6 '>Apellidos:</span>
         <input type='text' className='peer text-center border-2 mt-3' name='surnames' id='surnames' minLength={2} required />
 
         <span className=' text-center mt-6 '>Alérgenos o intolerancias:</span>
